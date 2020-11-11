@@ -1,0 +1,292 @@
+/*Задание 2 Синтаксис CSS правила*/
+p {
+  color: red;
+  font-size: 20px;
+}
+/* Задание 3 Селекторы и вес селектора: любой элемент, приоритет без ранга */
+* {
+  margin: 0;
+  padding: 0;
+}
+/* Задание 4 Селекторы и вес селектора: тег, приоритет 4-го ранга */
+* {
+  color: red;
+}
+li {
+  list-style: none;
+  color: green;
+}
+/* Задание 5  Селекторы и вес селектора: класс, приоритет 3-го ранга */
+li {
+  list-style: none;
+  color: green;
+}
+.rule {
+  list-style: upper-roman;
+  color: navy;
+}
+/* Задание 6 Селекторы и вес селектора: избегаем повторения кода */
+.common-rule {
+  list-style: upper-roman;
+  font-size: 20px;
+}
+.first-rule {
+  color: red;
+}
+.last-rule {
+  color: green;
+}
+/* Задание 7 Селекторы и вес селектора: композиций классов, приоритет через суммирование разрядов */
+.btn {
+  border: none;
+  padding: 0.25rem 1.25rem;
+}
+
+.link {
+  text-decoration: none;
+  color: navy;
+}
+/* Напиши свой код под этой строкой */
+.btn.active {
+  color: red;
+}
+
+.link.active {
+  font-weight: 700;
+}
+/* Задание 8 Селекторы и вес селектора: псевдокласс, приоритет 3-го ранга */
+.link {
+  text-decoration: none;
+  color: navy;
+  opacity: 0.5;
+}
+/* Напиши свой код под этой строкой */
+.link:hover,
+.link:focus {
+  opacity: 1;
+}
+/* Задание 9 Селекторы и вес селектора: атрибут, приоритет 3-го ранга */
+[type] {
+  color: white;
+}
+button[type="reset"] {
+  color: green;
+}
+/* Задание 10 Селектор атрибута: символ ^ для выбора тех значений атрибута, которые начинаются с определенных символов */
+.link {
+  text-decoration: none;
+}
+[href^="./"] {
+  color: red;
+}
+[href^="https"] {
+  color: navy;
+}
+/* Задание 11 Селектор атрибута: символ $ для выбора тех значений атрибута, которые заканчиваются на определенные символы. */
+.link {
+  text-decoration: none;
+}
+[href$="html"] {
+  color: green;
+}
+[href$="css"] {
+  color: orangered;
+}
+/* Задание 12 Селектор атрибута: символ * для выбора тех значений атрибута, которые включают определенные символы */
+.link {
+  text-decoration: none;
+}
+[href*="about"] {
+  color: green;
+}
+[href*="com"] {
+  color: orangered;
+}
+/* Задание 13 Селекторы и вес селектора: id, приоритет 2-го ранга */
+.warning {
+  background-color: white;
+  color: red;
+}
+#sending {
+  background-color: teal;
+  color: white;
+}
+/* Задание 14 Инлайн стили, приоритет 1-го разряда */
+.warning {
+  background-color: white;
+  color: red;
+}
+#inline {
+  background-color: teal;
+  color: white;
+}
+/* Задание 15 !important, приоритет с повышением ранга селектора. */
+div {
+  background-color: navy !important;
+  color: white !important;
+}
+.warning {
+  background-color: white;
+  color: red;
+}
+#inline {
+  background-color: red;
+  color: white;
+}
+/* Задание 16 Селекторы отношений по родству. Прямой потомок. */
+ul {
+  padding: 0;
+  list-style: none;
+}
+.menu > .menu-item {
+  display: inline-block;
+  vertical-align: top;
+}
+/* Задание 17 Селекторы отношений по родству. Любой потомок. */
+ul {
+  padding: 0;
+  list-style: none;
+}
+.menu > .menu-item {
+  display: inline-block;
+  vertical-align: top;
+  opacity: 1;
+}
+.sub-menu .menu-item {
+  opacity: 0;
+  margin-left: 100px;
+}
+.menu-item:hover .menu-item {
+  opacity: 1;
+}
+/* Задание 18 Селекторы отношений по соседству. Первый сосед. */
+.item-1 + .item {
+  color: red;
+}
+/* Задание 19 Селекторы отношений по соседству. Любой нижний сосед. */
+.item-2 ~ .item {
+  color: red;
+}
+/* Задание 20 Каскад. Приоритет при равенстве селекторов. */
+.headline.title {
+  color: navy;
+}
+.title[title] {
+  color: maroon;
+}
+/* Задание 21 Каскад. Наследование. */
+.cards {
+  color: navy;
+}
+.last-of-type {
+  color: firebrick;
+}
+/* Задание 22 Каскад. Исключения в наследовании. */
+.list {
+  padding-left: 0;
+  list-style: none;
+  color: green;
+}
+.list-link {
+  color: green;
+}
+/* Задание 24 Цвет в CSS: rgb */
+.box {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+.red {
+  background-color: rgb(255, 0, 0);
+}
+.green {
+  background-color: rgb(0, 255, 0);
+}
+.blue {
+  background-color: rgb(0, 0, 255);
+}
+/* Задание 25 Цвет в CSS: hex */
+.box {
+  background-color: #000;
+  color: #fff;
+}
+.red {
+  background-color: #f00;
+}
+.green {
+  background-color: #0f0;
+}
+.blue {
+  background-color: #00f;
+}
+/* Задание 26 Цвет в CSS: hsl */
+.lightness {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  margin: 0.5rem;
+  text-align: center;
+  border: 1px solid gold;
+}
+.lightness-100 {
+  background-color: hsl(0, 100%, 100%);
+}
+.lightness-75 {
+  background-color: hsl(0, 100%, 75%);
+}
+.lightness-50 {
+  background-color: hsl(0, 100%, 50%);
+}
+.lightness-25 {
+  background-color: hsl(0, 100%, 25%);
+  color: hsl(0, 100%, 100%);
+}
+.lightness-0 {
+  background-color: hsl(0, 100%, 0%);
+  color: hsl(0, 100%, 100%);
+}
+/* Задание 27 Прозрачность: opacity и transparent */
+.container {
+  padding: 1rem;
+  background-color: navy;
+}
+.box {
+  width: 200px;
+  height: 50px;
+  margin: 1rem auto;
+  color: #fff;
+  font-size: 24px;
+  line-height: 50px;
+  text-align: center;
+  cursor: pointer;
+  background-color: orchid;
+  border: 4px solid gold;
+}
+
+.opacity {
+  opacity: 0.5;
+}
+.opacity:hover,
+.opacity:focus {
+  opacity: 1;
+}
+.transparent:hover,
+.transparent:focus {
+  background-color: transparent;
+}
+/* Задание 28 Прозрачность: альфа-канал */
+[data-color] {
+  padding: 0.5rem 1.5rem;
+  border: none;
+  background-color: #008;
+  color: #fff;
+  font-size: 1.5rem;
+}
+[data-color="rgba"]:hover {
+  background-color: rgba(0, 0, 136, 0.5);
+}
+[data-color="hsla"]:hover {
+  background-color: hsla(240, 100%, 27%, 0.5);
+}
+[data-color="hexa"]:hover {
+  background-color: #00008a80;
+}

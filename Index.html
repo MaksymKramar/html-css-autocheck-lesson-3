@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Задание 1 Подключение css файлов к странице-->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Задание 23 Подключение css файлов к странице -->
+    <link rel="stylesheet" href="css/modern-normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+    <!-- Задание 2 Синтаксис CSS правила -->
+    <p>По умолчанию в браузере цвет текста - черный</p>
+    <p>По умолчанию в размер шрифта текста - 16px</p>
+    <!-- Задание 3 Селекторы и вес селектора: любой элемент, приоритет без ранга -->
+    <ul>
+        <li>По умолчанию многие элементы (напрмер заголовки) могут иметь значения `margin` отличные от `0`</li>
+        <li>По умолчанию у списка `padding-left` равен `40px`</li>
+    </ul>
+    <!-- Задание 4 Селекторы и вес селектора: тег, приоритет 4-го ранга -->
+    <ol>
+        <li>У списка можно отменить оформление по умолчанию</li>
+        <li>У списка можно отменить оформление по умолчанию</li>
+    </ol>
+    <ul>
+        <li>У списка можно отменить оформление по умолчанию</li>
+        <li>У списка можно отменить оформление по умолчанию</li>
+    </ul>
+    <!-- Задание 5  Селекторы и вес селектора: класс, приоритет 3-го ранга -->
+    <ol class="rules">
+        <li class="rule">Класс - основной селектор для оформления стилей</li>
+        <li class="rule">У класса более высокий приоритет, чем у тега</li>
+        <li class="rule">Избегай по возможности сложных селекторов, например сочетания тега и класса</li>
+        <li class="rule">Лучший селектор - это один класс. Но это не всегда возможно.</li>
+    </ol>
+    <!-- Задание 6 Селекторы и вес селектора: избегаем повторения кода -->
+    <ol class="rules">
+        <li class="common-rule first-rule">Класс - основной селектор для оформления стилей</li>
+        <li class="common-rule ">У класса более высокий приоритет, чем у тега</li>
+        <li class="common-rule">Избегай по возможности сложных селекторов, например сочетания тега и класса</li>
+        <li class="common-rule last-rule">Лучший селектор - это один класс. Но это не всегда возможно.</li>
+    </ol>
+    <!-- Задание 7 Селекторы и вес селектора: композиций классов, приоритет через суммирование разрядов -->
+    <button class="btn" type="button">Да</button>
+    <button class="btn active" type="button">Нет</button>
+    <a class="link" href="#">Ссылка 1</a>
+    <a class="link active" href="#">Ссылка 2</a>
+    <!-- Задание 8 Селекторы и вес селектора: псевдокласс, приоритет 3-го ранга -->
+    <a class="link" href="#">Ссылка 1</a>
+    <a class="link" href="#">Ссылка 2</a>
+    <!-- Задание 9 Селекторы и вес селектора: атрибут, приоритет 3-го ранга -->
+    <button class="btn" type="button">продолжить</button>
+    <button class="btn" type="reset">по умолчанию</button>
+    <button class="btn" type="submit">отправить</button>
+    <a class="btn" href="./help.html">помощь</a>
+    <!-- Задание 10 Селектор атрибута: символ ^ для выбора тех значений атрибута, которые начинаются с определенных символов -->
+    <ul>
+        <li>
+            <a class="link" href="./index.html">На главную</a>
+        </li>
+        <li>
+            <a class="link" href="./about.html">О нас</a>
+        </li>
+        <li>
+            <a class="link" href="./contats.html">Контакты</a>
+        </li>
+    </ul>
+    
+    <ul>
+        <li>
+            <a class="link" href="https://www.google.com">Google</a>
+        </li>
+        <li>
+            <a class="link" href="https://developer.mozilla.org/ru/docs/web/css">MDN + CSS</a>
+        </li>
+        <li>
+            <a class="link" href="https://stackoverflow.com/questions/tagged/css">StackOverflow + CSS</a>
+        </li>
+    </ul>
+    <!-- Задание 11 Селектор атрибута: символ $ для выбора тех значений атрибута, которые заканчиваются на определенные символы. -->
+    <ul>
+        <li>
+            <a class="link" href="./index.html">На главную</a>
+        </li>
+        <li>
+            <a class="link" href="./about.html">О нас</a>
+        </li>
+        <li>
+            <a class="link" href="./contats.html">Контакты</a>
+        </li>
+    </ul>
+    
+    <ul>
+        <li>
+            <a class="link" href="https://www.google.com">Google</a>
+        </li>
+        <li>
+            <a class="link" href="https://developer.mozilla.org/ru/docs/web/css">MDN + CSS</a>
+        </li>
+        <li>
+            <a class="link" href="https://stackoverflow.com/questions/tagged/css">StackOverflow + CSS</a>
+        </li>
+    </ul>
+    <!-- Задание 12 Селектор атрибута: символ * для выбора тех значений атрибута, которые включают определенные символы -->
+    <ul>
+        <li>
+            <a class="link" href="./index.html">На главную</a>
+        </li>
+        <li>
+            <a class="link" href="./about-book.html">О книге</a>
+        </li>
+        <li>
+            <a class="link" href="./about-author.html">Об авторе</a>
+        </li>
+    </ul>
+    
+    <ul>
+        <li>
+            <a class="link" href="https://www.google.com/">Google</a>
+        </li>
+        <li>
+            <a class="link" href="https://developer.mozilla.org/ru/docs/web/css">MDN + CSS</a>
+        </li>
+        <li>
+            <a class="link" href="https://stackoverflow.com/questions/tagged/css">StackOverflow + CSS</a>
+        </li>
+    </ul>
+    <!-- Задание 13 Селекторы и вес селектора: id, приоритет 2-го ранга -->
+    <div class="warning" id="sending">Использование id в качестве селектора в большинстве случаев является плохой практикой.
+        Потому что приводят к дублированию кода и, как следствие, к излишней сложности кода.</div>
+    <!-- Задание 14 Инлайн стили, приоритет 1-го разряда -->
+    <div class="warning" id="inline" style="background-color: orange; color: navy;">Инлайн стили нежелательно использовать из-за более высокого приоритета чем у
+        id, а также из-за сложности c поддержкой и переиспользованем кода.</div>
+    <!-- Задание 15 !important, приоритет с повышением ранга селектора. -->
+    <div class="warning" id="inline" style="background-color: orange; color: navy;">Использование !important крайне
+        нежелательно. Этот способ повысить приоритет до неизменяемого применяют обычно только для оформления предупреждений
+        или сообщений об ошибках приложения.</div>
+    <!-- Задание 16 Селекторы отношений по родству. Прямой потомок. -->
+    <ul class="menu">
+        <li class="menu-item">
+            <a href="#" class="menu-link">Меню 1</a>
+        </li>
+        <li class="menu-item">
+            <ul class="sub-menu">
+                <li class="menu-item">
+                    <a href="#" class="menu-link">Sub Меню 1</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-link">Sub Меню 2</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-link">Sub Меню 3</a>
+                </li>
+            </ul>
+            <a href="#" class="menu-link">Меню 2</a>
+        </li>
+        <li class="menu-item">
+            <a href="#" class="menu-link">Меню 3</a>
+        </li>
+    </ul>
+    <!-- Задание 17 Селекторы отношений по родству. Любой потомок. -->
+    <ul class="menu">
+        <li class="menu-item">
+            <a href="#" class="menu-link">Меню 1</a>
+        </li>
+        <li class="menu-item">
+            <a href="#" class="menu-link">Меню 2 ▼</a>
+            <ul class="sub-menu">
+                <li class="menu-item">
+                    <a href="#" class="menu-link">Sub Меню 1</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-link">Sub Меню 2 ▼</a>
+                    <ul class="sub-menu">
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">Sub Меню 1</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">Sub Меню 2</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">Sub Меню 3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-link">Sub Меню 3</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-link">Sub Меню 4</a>
+                </li>
+            </ul>
+        </li>
+        <li class="menu-item">
+            <a href="#" class="menu-link">Меню 3</a>
+        </li>
+    </ul>
+    <!-- Задание 18 Селекторы отношений по соседству. Первый сосед. -->
+    <ul class="items">
+        <li class="item item-1">1-й сосед</li>
+        <li class="item item-2">2-й сосед</li>
+        <li class="item item-3">3-й сосед</li>
+        <li class="item item-4">4-й сосед</li>
+    </ul>
+    <!-- Задание 19 Селекторы отношений по соседству. Любой нижний сосед. -->
+    <ul class="items">
+        <li class="item item-1">1-й сосед</li>
+        <li class="item item-2">2-й сосед</li>
+        <li class="item item-3">3-й сосед</li>
+        <li class="item item-4">4-й сосед</li>
+    </ul>
+    <!-- Задание 20 Каскад. Приоритет при равенстве селекторов. -->
+    <h4 class="title headline" title="1">1</h4>
+    <h4 class="title headline" title="2">2</h4>
+    <h4 class="title headline" title="3">3</h4>
+    <!-- Задание 21 Каскад. Наследование. -->
+    <ul class="cards">
+        <li class="card">
+            <h4 class="card-title">Заголовок карточки 1</h4>
+            <p class="card-description">
+                Текст - описание для карточки 1.
+            </p>
+        </li>
+        <li class="card">
+            <h4 class="card-title">Заголовок карточки 2</h4>
+            <p class="card-description">
+                Текст - описание для карточки 2.
+            </p>
+        </li>
+        <li class="card last-of-type">
+            <h4 class="card-title">Заголовок карточки 3</h4>
+            <p class="card-description">
+                Текст - описание для карточки 3.
+            </p>
+        </li>
+    </ul>
+    <!-- Задание 22 Каскад. Исключения в наследовании. -->
+    <ul class="list">
+        <li class="list-item">По умолчанию в браузере цвет текста - черный</li>
+        <li class="list-item"><a class="list-link" href="#">По умолчанию в браузере цвет ссылки - синий с подчеркиванием</a>
+        </li>
+        <li class="list-item">По умолчанию у списка `padding-left` равен `40px`</li>
+    </ul>
+    <!-- Задание 24 Цвет в CSS: rgb -->
+    <div class="box">Белый текст на черном фоне.</div>
+    <div class="box red">Белый текст на красном фоне.</div>
+    <div class="box green">Белый текст на зеленом фоне.</div>
+    <div class="box blue">Белый текст на синем фоне.</div>
+    <!-- Задание 25 Цвет в CSS: hex -->
+    <div class="box">Белый текст на черном фоне.</div>
+    <div class="box red">Белый текст на красном фоне.</div>
+    <div class="box green">Белый текст на зеленом фоне.</div>
+    <div class="box blue">Белый текст на синем фоне.</div>
+    <!-- Задание 26 Цвет в CSS: hsl -->
+    <h2>h. s. lightness</h2>
+    <div class="lightness lightness-100">100%</div>
+    <div class="lightness lightness-75">75%</div>
+    <div class="lightness lightness-50">50%</div>
+    <div class="lightness lightness-25">25%</div>
+    <div class="lightness lightness-0">0</div>
+    <!-- Задание 27 Прозрачность: opacity и transparent -->
+    <div class="container">
+        <div class="box opacity">Opacity</div>
+        <div class="box transparent">Transparent</div>
+    </div>
+    <!-- Задание 28 Прозрачность: альфа-канал -->
+    <button data-color="rgba">rgba</button>
+    <button data-color="hsla">hsla</button>
+    <button data-color="hexa">hexa</button>
+
+</body>
+</html>
